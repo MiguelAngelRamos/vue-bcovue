@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Navbar/>
+  <div class="container">
+    <h3 class="text-center">{{ titulo }}</h3>
+    <Table/>
+    <button class="btn btn-success">Test Button</button>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue';
+import Table from './components/Table.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar,
+    Table
+  },
+  data() {
+    return {
+      titulo: "App Vue Bco",
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
